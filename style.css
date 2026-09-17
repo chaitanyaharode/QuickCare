@@ -1,0 +1,370 @@
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8fbfd;
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #168aad;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #168aad;
+}
+
+
+/* Home Section */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(to right, #e8f8fc, #f8fbfd);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #126782;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #168aad;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #126782;
+}
+
+
+/* Common Section */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #126782;
+    margin-bottom: 30px;
+}
+
+
+/* Services */
+.services {
+    background-color: white;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 280px;
+    padding: 25px;
+    background-color: #f1f9fb;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    color: #168aad;
+    margin-bottom: 10px;
+}
+
+
+/* About and Contact */
+#about,
+#contact {
+    background-color: #f8fbfd;
+}
+
+#about p,
+#contact p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #126782;
+    color: white;
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        min-height: 450px;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* Doctors Section */
+
+.section-text {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+
+/* Search Area */
+
+.doctor-search {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.doctor-search input,
+.doctor-search select {
+    padding: 12px 15px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+
+/* Doctor Cards */
+
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    width: 260px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.doctor-card h3 {
+    color: #126782;
+    margin-bottom: 8px;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.doctor-card .fee {
+    font-weight: bold;
+    color: #168aad;
+    margin: 12px 0;
+}
+
+
+/* Doctor Button */
+
+.select-doctor {
+    border: none;
+    padding: 10px 18px;
+    background-color: #168aad;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.select-doctor:hover {
+    background-color: #126782;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .doctor-search {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doctor-search input,
+    .doctor-search select {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .doctor-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* Appointment Form */
+
+#appointment {
+    background-color: #eef9fc;
+}
+
+.appointment-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #168aad;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #168aad;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #126782;
+}
+
+
+/* Mobile Appointment Form */
+
+@media (max-width: 768px) {
+
+    .appointment-box {
+        padding: 20px;
+    }
+
+}

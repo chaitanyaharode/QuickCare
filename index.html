@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickCare - Doctor Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                QuickCare
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#appointment">Appointment</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Book Your Doctor Appointment Easily</h1>
+
+            <p>
+                QuickCare helps you book your doctor appointment
+                quickly and easily without waiting in a queue.
+            </p>
+
+            <a href="#appointment" class="btn">
+                Book Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services">
+
+        <h2>Why Choose QuickCare?</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <h3>Easy Booking</h3>
+                <p>Book your appointment in just a few simple steps.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Choose Doctor</h3>
+                <p>Find doctors according to their specialization.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Available Slots</h3>
+                <p>Choose an available date and time slot.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Doctors Section -->
+    <section id="doctors">
+
+    <h2>Find a Doctor</h2>
+
+    <p class="section-text">
+        Search for a doctor according to name or specialization.
+    </p>
+
+    <!-- Search and Filter -->
+    <div class="doctor-search">
+
+        <input
+            type="text"
+            id="doctorSearch"
+            placeholder="Search doctor..."
+        >
+
+        <select id="specializationFilter">
+            <option value="all">All Specializations</option>
+            <option value="cardiologist">Cardiologist</option>
+            <option value="dermatologist">Dermatologist</option>
+            <option value="dentist">Dentist</option>
+            <option value="general">General Physician</option>
+        </select>
+
+    </div>
+
+
+    <!-- Doctor Cards -->
+    <div class="doctor-container">
+
+        <div class="doctor-card" data-name="Rahul Sharma" data-specialization="cardiologist">
+
+            <div class="doctor-icon">👨‍⚕️</div>
+
+            <h3>Dr. Rahul Sharma</h3>
+
+            <p>Cardiologist</p>
+
+            <p>Experience: 8 Years</p>
+
+            <p class="fee">₹500 Consultation</p>
+
+            <button class="select-doctor"
+                    onclick="selectDoctor('Dr. Rahul Sharma')">
+                Book Appointment
+            </button>
+
+        </div>
+
+
+        <div class="doctor-card" data-name="Priya Verma" data-specialization="dermatologist">
+
+            <div class="doctor-icon">👩‍⚕️</div>
+
+            <h3>Dr. Priya Verma</h3>
+
+            <p>Dermatologist</p>
+
+            <p>Experience: 6 Years</p>
+
+            <p class="fee">₹400 Consultation</p>
+
+            <button class="select-doctor"
+                    onclick="selectDoctor('Dr. Priya Verma')">
+                Book Appointment
+            </button>
+
+        </div>
+
+
+        <div class="doctor-card" data-name="Amit Patil" data-specialization="dentist">
+
+            <div class="doctor-icon">👨‍⚕️</div>
+
+            <h3>Dr. Amit Patil</h3>
+
+            <p>Dentist</p>
+
+            <p>Experience: 7 Years</p>
+
+            <p class="fee">₹350 Consultation</p>
+
+            <button class="select-doctor"
+                    onclick="selectDoctor('Dr. Amit Patil')">
+                Book Appointment
+            </button>
+
+        </div>
+
+
+        <div class="doctor-card" data-name="Sneha Joshi" data-specialization="general">
+
+            <div class="doctor-icon">👩‍⚕️</div>
+
+            <h3>Dr. Sneha Joshi</h3>
+
+            <p>General Physician</p>
+
+            <p>Experience: 5 Years</p>
+
+            <p class="fee">₹300 Consultation</p>
+
+            <button class="select-doctor"
+                    onclick="selectDoctor('Dr. Sneha Joshi')">
+                Book Appointment
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Appointment Section -->
+    <section id="appointment">
+
+    <h2>Book an Appointment</h2>
+
+    <p class="section-text">
+        Fill in your details and select your preferred doctor, date and time.
+    </p>
+
+    <div class="appointment-box">
+
+        <form id="appointmentForm">
+
+            <!-- Patient Name -->
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="patientAge">Age</label>
+                <input
+                    type="number"
+                    id="patientAge"
+                    placeholder="Enter your age"
+                    min="1"
+                    max="120"
+                    required
+                >
+            </div>
+
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="gender">Gender</label>
+
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+
+            <!-- Mobile Number -->
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="Enter 10 digit mobile number"
+                    pattern="[0-9]{10}"
+                    required
+                >
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+
+            <!-- Doctor -->
+            <div class="form-group">
+                <label for="doctor">Select Doctor</label>
+
+                <select id="doctor" required>
+
+                    <option value="">Select Doctor</option>
+
+                    <option value="Dr. Rahul Sharma">
+                        Dr. Rahul Sharma - Cardiologist
+                    </option>
+
+                    <option value="Dr. Priya Verma">
+                        Dr. Priya Verma - Dermatologist
+                    </option>
+
+                    <option value="Dr. Amit Patil">
+                        Dr. Amit Patil - Dentist
+                    </option>
+
+                    <option value="Dr. Sneha Joshi">
+                        Dr. Sneha Joshi - General Physician
+                    </option>
+
+                </select>
+            </div>
+
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+
+                <input
+                    type="date"
+                    id="appointmentDate"
+                    required
+                >
+            </div>
+
+
+            <!-- Time -->
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time</label>
+
+                <select id="appointmentTime" required>
+
+                    <option value="">Select Time</option>
+
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="02:30 PM">02:30 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="03:30 PM">03:30 PM</option>
+
+                </select>
+            </div>
+
+
+            <!-- Reason -->
+            <div class="form-group">
+
+                <label for="reason">
+                    Reason for Appointment
+                </label>
+
+                <textarea
+                    id="reason"
+                    rows="4"
+                    placeholder="Enter reason for appointment"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="book-btn">
+                Confirm Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+    <!-- About Section -->
+    <section id="about">
+
+        <h2>About QuickCare</h2>
+
+        <p>
+            QuickCare is a simple online doctor appointment website
+            designed to save patients time and make appointment booking easier.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: quickcare@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 QuickCare. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
